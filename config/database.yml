@@ -1,0 +1,19 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: tapes_development
+  pool: 5
+  username: tapes
+  password: tapes
+  timeout: 5000
+  host: 'localhost'
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: tapes_test
+  pool: 5
+  username: tapes
+  password: tapes
+  timeout: 5000
+  host: 'localhost'
