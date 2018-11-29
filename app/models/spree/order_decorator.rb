@@ -1,4 +1,6 @@
 Spree::Order.class_eval do
+  enum customer_type: [:individual, :entity]
+
   checkout_flow do
     go_to_state :address
     go_to_state :payment, :if => lambda { |order| order.payment_required? }
