@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_134322) do
+ActiveRecord::Schema.define(version: 2018_11_29_142129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -312,6 +312,13 @@ ActiveRecord::Schema.define(version: 2018_11_29_134322) do
     t.decimal "taxable_adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
     t.decimal "non_taxable_adjustment_total", precision: 10, scale: 2, default: "0.0", null: false
     t.integer "customer_type", default: 0
+    t.string "payer_account_number"
+    t.string "representative_position"
+    t.string "grounds"
+    t.string "bank_name"
+    t.string "bank_address"
+    t.string "checking_account"
+    t.string "bic"
     t.index ["approver_id"], name: "index_spree_orders_on_approver_id"
     t.index ["bill_address_id"], name: "index_spree_orders_on_bill_address_id"
     t.index ["canceler_id"], name: "index_spree_orders_on_canceler_id"
