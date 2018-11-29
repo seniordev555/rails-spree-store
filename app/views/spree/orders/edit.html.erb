@@ -25,20 +25,14 @@
               <%= button_tag class: 'btn btn-lg btn-success', id: 'checkout-link', name: 'checkout' do %>
                 <%= Spree.t(:checkout) %>
               <% end %>
-              <%= check_box_tag 'as_entity', true %>
-              <%= label_tag 'entity', 'Buy as an entity' %>
+              <br>
+              <%= order_form.radio_button :customer_type, :individual, checked: true %>
+              <%= label :individual, 'Buy as an individual' %>
+              <br>
+              <%= order_form.radio_button :customer_type, :entity %>
+              <%= label :entity, 'Buy as an entity' %>
             </div>
           </div>
-
-<!--           <% if Spree::Frontend::Config[:coupon_codes_enabled] %>
-            <div class='col-md-6 form-inline pull-right' data-hook='coupon_code'>
-              <label>
-                <%= order_form.label :coupon_code %>
-                <%= order_form.text_field :coupon_code, size: '30', class: 'form-control' %>
-                <%= button_tag Spree.t(:coupon_code_apply), class: 'btn btn-default' %>
-              </label>
-            </div>
-          <% end %> -->
         </div>
       <% end %>
     </div>

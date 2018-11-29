@@ -28,7 +28,7 @@
           <%= render partial: 'spree/address/form', locals: { form: ship_form, address_type: 'shipping', address: @order.ship_address } %>
         </div>
       <% end %>
-          <ul class="list-group" id="payment-method-fields" data-hook>
+    <ul class="list-group" id="payment-method-fields" data-hook>
       <% @order.available_payment_methods.each do |method| %>
         <li class="list-group-item radio">
           <label>
