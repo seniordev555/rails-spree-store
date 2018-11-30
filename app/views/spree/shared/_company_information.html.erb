@@ -1,1 +1,42 @@
-</>
+<div class="address vcard">
+  <% unless order.bill_address.company.blank? %>
+    <div class="org">
+      <b>Название компании: </b><%= order.bill_address.company %>
+    </div>
+  <% end %>
+  <% unless order.payer_account_number.blank? %>
+    <div class="org">
+      <b>УНП: </b><%= order.payer_account_number %>
+    </div>
+  <% end %>
+  <% unless order.representative_position.blank? %>
+    <div class="org">
+      <b>Позиция представителя: </b><%= order.representative_position %>
+    </div>
+  <% end %>
+  <% unless order.grounds.blank? %>
+    <div class="org">
+      <b>Основания представителя: </b><%= order.grounds %>
+    </div>
+  <% end %>
+  <% unless order.bank_name.blank? %>
+    <div class="org">
+      <b>Название банка: </b><%= order.bank_name %>
+    </div>
+  <% end %>
+  <% unless order.bank_address.blank? %>
+    <div class="org">
+      <b>Адрес банка: </b><%= order.bank_address %>
+    </div>
+  <% end %>
+  <% unless order.checking_account.blank? %>
+    <div class="org">
+      <b>Расчетный счет: </b><%= order.checking_account %>
+    </div>
+  <% end %>
+  <% unless order.bic.blank? %>
+    <div class="org">
+      <b>BIC/SWIFT: </b><%= order.bic %>
+    </div>
+  <% end %>
+</div>
