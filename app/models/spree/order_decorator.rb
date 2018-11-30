@@ -1,20 +1,30 @@
 Spree::Order.class_eval do
   enum customer_type: [:individual, :entity]
 
+  validates :customer_type, presence: true
+  
+  with_options presence: true, if: :validations_required? do
+    validates :payer_account_number
+    validates :representative_position
+    validates :grounds
+    validates :bank_name
+    validates :bank_address
+    validates :checking_account
+    validates :bic
+  end
+
   checkout_flow do
     go_to_state :address
-    go_to_state :payment, :if => lambda { |order| order.payment_required? }
-    go_to_state :confirm, :if => lambda { |order| order.confirmation_required? }
+    go_to_state :payment, if: lambda { |order| order.payment_required? }
+    go_to_state :confirm
     go_to_state :complete
   end
 
-  # If true, causes the payment step to happen during the checkout process
   def payment_required?
     return false
   end
 
-  # If true, causes the confirmation step to happen during the checkout process
-  def confirmation_required?
-    return true
+  def validations_required?
+    entity? && !cart? 
   end
 end
