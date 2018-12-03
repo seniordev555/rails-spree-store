@@ -79,7 +79,7 @@
         </div>
         <div class="panel-body">
           <% if @order.entity? %>
-            <%= render 'spree/admin/shared/entity', order: @order, type: 'billing'%>
+            <%= render 'spree/admin/shared/company_information', order: @order, type: 'billing'%>
           <% else %>
             Заказ от физического лица, нет информации о компании.
           <% end %>
