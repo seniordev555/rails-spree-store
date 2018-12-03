@@ -1,0 +1,56 @@
+<% s_or_b = type.chars.first %>
+
+<div id="<%= type %>" data-hook="address_fields">
+  <%= fields_for @order.bill_address do |f| %>
+    <%= field_container f.object, :company, class: ["form-group", "#{type}-row"] do %>
+      <%= f.label :company, Spree.t(:company) %>
+      <%= f.text_field :company, class: 'form-control' %>
+      <%= error_message_on f.object, :company %>
+    <% end %>
+  <% end %>
+
+  <%= fields_for @order do |f| %>
+    <p class="form-group" >
+      <%= f.label :payer_account_number, Spree.t(:payer_account_number) %>
+      <%= f.text_field :payer_account_number, class: 'form-control' %>
+    </p>
+
+    <p class="form-group" >
+      <%= f.label :representative_position, Spree.t(:representative_position) %>
+      <%= f.text_field :representative_position, class: 'form-control' %>
+    </p>
+
+    <p class="form-group" >
+      <%= f.label :grounds, Spree.t(:grounds) %>
+      <%= f.text_field :grounds, class: 'form-control' %>
+    </p>
+
+    <p class="form-group" >
+      <%= f.label :bank_name, Spree.t(:bank_name) %>
+      <%= f.text_field :bank_name, class: 'form-control' %>
+    </p>
+
+    <p class="form-group" >
+      <%= f.label :bank_address, Spree.t(:bank_address) %>
+      <%= f.text_field :bank_address, class: 'form-control' %>
+    </p>
+
+    <p class="form-group" >
+      <%= f.label :checking_account, Spree.t(:checking_account) %>
+      <%= f.text_field :checking_account, class: 'form-control' %>
+    </p>
+
+    <p class="form-group" >
+      <%= f.label :bic, Spree.t(:bic) %>
+      <%= f.text_field :bic, class: 'form-control' %>
+    </p>
+  <% end %>
+</div>
+
+<% content_for :head do %>
+  <%= javascript_tag do %>
+    $(document).ready(function(){
+      $('span#<%= s_or_b %>country .select2').on('change', function() { update_state('<%= s_or_b %>'); });
+    });
+  <% end %>
+<% end %>

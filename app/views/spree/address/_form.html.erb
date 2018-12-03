@@ -44,6 +44,7 @@
     <% end %>
     <%= form.phone_field :phone, class: 'form-control', required: address.require_phone? %>
   </p>
+
   <% if @order.entity? %>
     <p class="form-group" id=<%="#{address_id}company" %>>
       <%= form.label :company, Spree.t(:company) %>
@@ -58,36 +59,42 @@
         <%= f.text_field :payer_account_number, class: 'form-control' %>
       </p>
     <% end %>
+
     <% if @order.entity? %>
       <p class="form-group" id=<%="#{address_id}representative_position" %>>
         <%= f.label :representative_position, Spree.t(:representative_position) %>
         <%= f.text_field :representative_position, class: 'form-control' %>
       </p>
     <% end %>
+
     <% if @order.entity? %>
       <p class="form-group" id=<%="#{address_id}grounds" %>>
         <%= f.label :grounds, Spree.t(:grounds) %>
         <%= f.text_field :grounds, class: 'form-control' %>
       </p>
     <% end %>
+
     <% if @order.entity? %>
       <p class="form-group" id=<%="#{address_id}bank_name" %>>
         <%= f.label :bank_name, Spree.t(:bank_name) %>
         <%= f.text_field :bank_name, class: 'form-control' %>
       </p>
     <% end %>
+    
     <% if @order.entity? %>
       <p class="form-group" id=<%="#{address_id}bank_address" %>>
         <%= f.label :bank_address, Spree.t(:bank_address) %>
         <%= f.text_field :bank_address, class: 'form-control' %>
       </p>
     <% end %>
+
     <% if @order.entity? %>
       <p class="form-group" id=<%="#{address_id}checking_account" %>>
         <%= f.label :checking_account, Spree.t(:checking_account) %>
         <%= f.text_field :checking_account, class: 'form-control' %>
       </p>
     <% end %>
+
     <% if @order.entity? %>
       <p class="form-group" id=<%="#{address_id}bic" %>>
         <%= f.label :bic, Spree.t(:bic) %>
