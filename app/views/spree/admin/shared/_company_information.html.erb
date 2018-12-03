@@ -1,6 +1,6 @@
 <% s_or_b = type.chars.first %>
 
-<div id="<%= type %>" data-hook="address_fields">
+<div id="<%= type %>" data-hook="order_fields">
   <%= fields_for @order.bill_address do |f| %>
     <%= field_container f.object, :company, class: ["form-group", "#{type}-row"] do %>
       <%= f.label :company, Spree.t(:company) %>
