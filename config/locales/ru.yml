@@ -1,0 +1,11 @@
+ru:
+  spree:
+    grounds: "На основании чего представитель действует"
+    payer_account_number: "Учётный номер плательщика"
+    representative_position: "Должность представителя"
+    bank_name: "Название банка"
+    bank_address: "Адрес банка"
+    checking_account: "Расчетный счет"
+    bic: "BIC/SWIFT"
+    company_information: "Информация о компании"
+    full_name: "ФИО"
