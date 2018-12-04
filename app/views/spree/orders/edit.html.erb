@@ -25,12 +25,6 @@
               <%= button_tag class: 'btn btn-lg btn-success', id: 'checkout-link', name: 'checkout' do %>
                 <%= Spree.t(:checkout) %>
               <% end %>
-              <br>
-              <%= order_form.radio_button :customer_type, :individual, checked: true %>
-              <%= label :individual, 'Buy as an individual' %>
-              <br>
-              <%= order_form.radio_button :customer_type, :entity %>
-              <%= label :entity, 'Buy as an entity' %>
             </div>
           </div>
         </div>

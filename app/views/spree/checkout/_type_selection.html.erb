@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-sm-12" data-hook="billing_fieldset_wrapper">
+    <div class="panel panel-default" id="billing" data-hook>
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= Spree.t(:type_selection) %></h3>
+        </div>
+        <div class="panel-body">
+          <br>
+          <%= form.radio_button :customer_type, :individual, checked: true %>
+          <%= label :individual, 'Buy as an individual' %>
+          <br>
+          <%= form.radio_button :customer_type, :entity %>
+          <%= label :entity, 'Buy as an entity' %>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="well text-right form-buttons" data-hook="buttons">
+  <%= submit_tag Spree.t(:save_and_continue), class: 'btn btn-lg btn-success' %>
+  <% if try_spree_current_user %>
+    <span data-hook="save_user_address" class='save-user-address-wrapper'>
+      &nbsp; &nbsp;
+      <%= check_box_tag 'save_user_address', '1', try_spree_current_user.respond_to?(:persist_order_address) %>
+      <%= label_tag :save_user_address, Spree.t(:save_my_address) %>
+    </span>
+  <% end %>
+</div>
