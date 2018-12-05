@@ -1,17 +1,17 @@
 Spree::Order.class_eval do
   enum customer_type: [:individual, :entity]
 
-  # validates :customer_type, presence: true
+  validates :customer_type, presence: true
 
-  # with_options presence: true, if: :validations_required? do
-  #   validates :payer_account_number
-  #   validates :representative_position
-  #   validates :grounds
-  #   validates :bank_name
-  #   validates :bank_address
-  #   validates :checking_account
-  #   validates :bic
-  # end
+  with_options presence: true, if: :validations_required? do
+    validates :payer_account_number
+    validates :representative_position
+    validates :grounds
+    validates :bank_name
+    validates :bank_address
+    validates :checking_account
+    validates :bic
+  end
 
   checkout_flow do
     go_to_state :type_selection
@@ -22,10 +22,10 @@ Spree::Order.class_eval do
   end
 
   def payment_required?
-    return false
+    false
   end
 
   def validations_required?
-    entity? && !cart?
+    entity? && complete?
   end
 end
