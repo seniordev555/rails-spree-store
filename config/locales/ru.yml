@@ -9,3 +9,6 @@ ru:
     bic: "BIC/SWIFT"
     company_information: "Информация о компании"
     full_name: "ФИО"
+    type_selection: "Форма организации"
+    order_state:
+        type_selection: "Выбор формы организации"
