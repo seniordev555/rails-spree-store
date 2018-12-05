@@ -1,5 +1,8 @@
 Spree::CheckoutController.class_eval do
   def update
+    if @order.type_selection?
+      params[:order][:customer_type] = params[:entity] ? :entity : :individual
+    end
     @order.update(entity_params)
 
     if @order.update_from_params(params, permitted_checkout_attributes, request.headers.env)
