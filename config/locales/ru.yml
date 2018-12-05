@@ -12,3 +12,4 @@ ru:
     type_selection: "Форма организации"
     order_state:
         type_selection: "Выбор формы организации"
+    order_already_updated: "Заказ уже был обновлён"
