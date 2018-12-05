@@ -32,7 +32,8 @@ Spree::CheckoutController.class_eval do
                                     :bank_name,
                                     :bank_address,
                                     :checking_account,
-                                    :bic)
+                                    :bic,
+                                    :customer_type)
     else
       {}
     end
