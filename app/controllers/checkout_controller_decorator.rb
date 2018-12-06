@@ -27,6 +27,10 @@ Spree::CheckoutController.class_eval do
 
   private
 
+  def check_registration
+    return
+  end
+
   def entity_params
     unless params[:order]&.empty?
       params.require(:order).permit(:payer_account_number,
