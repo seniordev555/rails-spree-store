@@ -63,11 +63,23 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "spree_#{Rails.env}"
 
-  config.action_mailer.perform_caching = false
-
   config.action_mailer.raise_delivery_errors = false
-
-  config.action_mailer.default_url_options = { :host => 'https://tapes-spree.herokuapp.com/' }
+  config.action_mailer.perform_caching = false
+  config.mails_from = ENV['GMAIL_USERNAME']
+  config.override_actionmailer_config = false
+  config.enable_mail_delivery = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'www.tapes-spree.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    domain: 'gmail.com',
+    port: '587',
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD'],
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
