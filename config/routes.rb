@@ -9,4 +9,9 @@ Rails.application.routes.draw do
   # the default of "spree".
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  Spree::Core::Engine.routes.draw do
+    get 'show_invoice', action: :show_invoice, controller: :orders
+    get 'show_contract', action: :show_contract, controller: :orders
+  end
 end

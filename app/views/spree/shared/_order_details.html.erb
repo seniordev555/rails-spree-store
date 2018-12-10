@@ -7,6 +7,12 @@
         <h4><%= Spree.t(:company_information) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:address) unless order.completed? %></h4>
         <%= render 'spree/shared/company_information', order: order %>
       <% end %>
+      <% if order.complete? %>
+        <br>
+        <%= link_to 'Открыть договор', show_contract_path(id: @order.number, format: :pdf), target: '_blank' %>
+        <br>
+        <%= link_to 'Открыть счёт-фактуру', show_invoice_path(id: @order.number, format: :pdf), target: '_blank' %>
+      <% end %>
     </div>
 
     <% if order.has_step?("delivery") %>
