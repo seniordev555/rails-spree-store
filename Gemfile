@@ -23,7 +23,7 @@ gem 'wkhtmltopdf-binary'
 gem 'pry'
 
 group :development, :test do
-  gem 'dotenv-rails'
+  gem 'dotenv-rails', :github => "bkeepers/dotenv"
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 

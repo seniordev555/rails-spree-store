@@ -1,4 +1,13 @@
 GIT
+  remote: https://github.com/bkeepers/dotenv.git
+  revision: d749366b6009126b115fb7b63e0509566365859a
+  specs:
+    dotenv (2.5.0)
+    dotenv-rails (2.5.0)
+      dotenv (= 2.5.0)
+      railties (>= 3.2, < 6.0)
+
+GIT
   remote: https://github.com/spree-contrib/spree_i18n.git
   revision: 56d8f7087a5d661dc0e02576e528730c10fa8ad0
   specs:
@@ -135,10 +144,6 @@ GEM
       warden (~> 1.2.3)
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
-    dotenv (2.5.0)
-    dotenv-rails (2.5.0)
-      dotenv (= 2.5.0)
-      railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     execjs (2.7.0)
     ffaker (2.10.0)
@@ -424,7 +429,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  dotenv-rails
+  dotenv-rails!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
