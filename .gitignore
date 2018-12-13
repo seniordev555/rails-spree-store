@@ -20,5 +20,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore environment files
 .env
 /config/secrets.yml
+
+# Ignore slider pictures
+public/spree/slides
