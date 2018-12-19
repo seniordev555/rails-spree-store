@@ -7,6 +7,8 @@ gem 'spree', '~> 3.6.4'
 gem 'spree_auth_devise', '~> 3.3'
 gem 'spree_gateway', '~> 3.3'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
+gem 'spree_slider', github: 'spree-contrib/spree_slider'
+
 gem 'rails', '~> 5.2.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
