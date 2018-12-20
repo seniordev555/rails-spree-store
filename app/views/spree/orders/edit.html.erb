@@ -18,11 +18,11 @@
           </div>
 
           <div class="links col-md-3 navbar-form pull-right text-right" data-hook="cart_buttons">
-            <div class="form-group">
-              <%= button_tag class: 'btn btn-primary', id: 'update-button' do %>
+            <div class="flex-w flex-m m-r-20 m-tb-5">
+              <%= button_tag class: 'flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10', id: 'update-button' do %>
                 <%= Spree.t(:update) %>
               <% end %>
-              <%= button_tag class: 'btn btn-lg btn-success', id: 'checkout-link', name: 'checkout' do %>
+              <%= button_tag class: 'flex-c-m stext-101 cl0 size-119 bg3 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10', id: 'checkout-link', name: 'checkout' do %>
                 <%= Spree.t(:checkout) %>
               <% end %>
             </div>
@@ -31,12 +31,11 @@
       <% end %>
     </div>
 
-    <div id="empty-cart" class="col-md-3 pull-left" data-hook>
+    <div class="links col-md-3 navbar-form pull-left text-left" data-hook>
       <%= form_tag empty_cart_path, method: :put do %>
-        <p id="clear_cart_link" data-hook>
-          <%= submit_tag Spree.t(:empty_cart), class: 'btn btn-default' %>
-          <%= Spree.t(:or) %>
-          <%= link_to Spree.t(:continue_shopping), products_path, class: 'continue' %>
+        <p class="flex-w flex-m m-r-20 m-tb-5" id="clear_cart_link" data-hook>
+          <%= submit_tag Spree.t(:empty_cart), class: 'flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10' %>
+          <%= link_to Spree.t(:continue_shopping), products_path, class: 'flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10' %>
         </p>
       <% end %>
     </div>
