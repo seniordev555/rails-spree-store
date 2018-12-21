@@ -1,18 +1,29 @@
 <% address_id = address_type.chars.first %>
 
 <div class="inner" data-hook=<%="#{address_type}_inner" %>>
+
+
+
   <p class="form-group" id=<%="#{address_id}firstname" %>>
-    <%= form.label :firstname do %>
-      <%= Spree.t(:first_name) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-    <% end %>
-    <%= form.text_field :firstname, class: 'form-control', required: true %>
+
+    <div class="bor8 bg0 m-b-22">
+      <%= form.text_field :firstname, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:first_name) %>
+    </div>
   </p>
+
+
+
+
+
   <p class="form-group" id=<%="#{address_id}address1" %>>
-    <%= form.label :address1 do %>
-      <%= Spree.t(:street_address) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-    <% end %>
-    <%= form.text_field :address1, class: 'form-control required' %>
+    <div class="bor8 bg0 m-b-22">
+      <%= form.text_field :address1, class: 'stext-111 cl8 plh3 size-111 p-lr-15', placeholder: Spree.t(:street_address) %>
+    </div>
   </p>
+
+
+
+
   <% if Spree::Config[:address_requires_state] %>
     <p class="form-group" id=<%="#{address_id}state" %>>
       <% have_states = !address.country.states.empty? %>
