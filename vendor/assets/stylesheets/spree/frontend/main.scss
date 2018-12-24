@@ -41,60 +41,60 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 @font-face {
   font-family: Poppins-Regular;
-  src: url('/assets/Poppins/Poppins-Regular');
+  src: font-url('Poppins/Poppins-Regular');
 }
 
 @font-face {
   font-family: Poppins-Light;
-  src: url('/assets/Poppins/Poppins-Light.ttf');
+  src: font-url('Poppins/Poppins-Light.ttf');
 }
 
 @font-face {
   font-family: Poppins-ExtraLight;
-  src: url('/assets/Poppins/Poppins-ExtraLight');
+  src: font-url('Poppins/Poppins-ExtraLight');
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('/assets/Poppins/Poppins-Medium');
+  src: font-url('Poppins/Poppins-Medium');
 }
 
 @font-face {
   font-family: Poppins-Italic;
-  src: url('/assets/Poppins/Poppins-Italic.ttf');
+  src: font-url('Poppins/Poppins-Italic.ttf');
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('/assets/Poppins/Poppins-Bold.ttf');
+  src: font-url('Poppins/Poppins-Bold.ttf');
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('/assets/Poppins/Poppins-SemiBold.ttf');
+  src: font-url('Poppins/Poppins-SemiBold.ttf');
 }
 
 
 /*---------------------------------------------*/
 @font-face {
   font-family: PlayfairDisplay-Regular;
-  src: url('assets/PlayfairDisplay/PlayfairDisplay-Regular.ttf');
+  src: font-url('PlayfairDisplay/PlayfairDisplay-Regular.ttf');
 }
 
 @font-face {
   font-family: PlayfairDisplay-Bold;
-  src: url('assets/PlayfairDisplay/PlayfairDisplay-Bold.ttf');
+  src: font-url('PlayfairDisplay/PlayfairDisplay-Bold.ttf');
 }
 
 /*---------------------------------------------*/
 @font-face {
   font-family: Montserrat-Regular;
-  src: url('assets/Montserrat/Montserrat-Regular.ttf');
+  src: font-url('Montserrat/Montserrat-Regular.ttf');
 }
 
 @font-face {
   font-family: Montserrat-Bold;
-  src: url('assets/Montserrat/Montserrat-Bold.ttf');
+  src: font-url('Montserrat/Montserrat-Bold.ttf');
 }
 
 
