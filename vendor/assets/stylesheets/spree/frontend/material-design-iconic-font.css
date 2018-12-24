@@ -779,6 +779,7 @@
   content: '\f1ca';
 }
 .zmdi-shopping-cart:before {
+  color:black;
   content: '\f1cb';
 }
 .zmdi-sign-in:before {
