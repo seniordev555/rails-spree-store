@@ -79,45 +79,54 @@
 
 
   <% if @order.entity? %>
+
     <p class="form-group" id=<%="#{address_id}company" %>>
-      <%= form.label :company, Spree.t(:company) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-      <%= form.text_field :company, class: 'form-control', required: true %>
+      <div class="bor8 bg0 m-b-22">
+        <%= form.text_field :company, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:company) %>
+      </div>
     </p>
 
     <%= fields_for @order do |f| %>
       <p class="form-group" id=<%="#{address_id}payer_account_number" %>>
-        <%= f.label :payer_account_number, Spree.t(:payer_account_number) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-        <%= f.text_field :payer_account_number, class: 'form-control', required: true %>
+        <div class="bor8 bg0 m-b-22">
+          <%= f.text_field :payer_account_number, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:payer_account_number) %>
+        </div>
       </p>
 
       <p class="form-group" id=<%="#{address_id}representative_position" %>>
-        <%= f.label :representative_position, Spree.t(:representative_position) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-        <%= f.text_field :representative_position, class: 'form-control', required: true %>
+        <div class="bor8 bg0 m-b-22">
+          <%= f.text_field :representative_position, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:representative_position) %>
+        </div>
       </p>
 
       <p class="form-group" id=<%="#{address_id}grounds" %>>
-        <%= f.label :grounds, Spree.t(:grounds) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-        <%= f.text_field :grounds, class: 'form-control', required: true %>
+        <div class="bor8 bg0 m-b-22">
+          <%= f.text_field :grounds, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:grounds) %>
+        </div>
       </p>
 
       <p class="form-group" id=<%="#{address_id}bank_name" %>>
-        <%= f.label :bank_name, Spree.t(:bank_name) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-        <%= f.text_field :bank_name, class: 'form-control', required: true %>
+        <div class="bor8 bg0 m-b-22">
+          <%= f.text_field :bank_name, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:bank_name) %>
+        </div>
       </p>
 
       <p class="form-group" id=<%="#{address_id}bank_address" %>>
-        <%= f.label :bank_address, Spree.t(:bank_address) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-        <%= f.text_field :bank_address, class: 'form-control', required: true %>
+        <div class="bor8 bg0 m-b-22">
+          <%= f.text_field :bank_address, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:bank_address) %>
+        </div>
       </p>
 
       <p class="form-group" id=<%="#{address_id}checking_account" %>>
-        <%= f.label :checking_account, Spree.t(:checking_account) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-        <%= f.text_field :checking_account, class: 'form-control', required: true %>
+        <div class="bor8 bg0 m-b-22">
+          <%= f.text_field :checking_account, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:checking_account) %>
+        </div>
       </p>
 
       <p class="form-group" id=<%="#{address_id}bic" %>>
-        <%= f.label :bic, Spree.t(:bic) %><abbr class="required" title="Обязательно для заполнения">*</abbr>
-        <%= f.text_field :bic, class: 'form-control', required: true %>
+        <div class="bor8 bg0 m-b-22">
+          <%= f.text_field :bic, class: 'stext-111 cl8 plh3 size-111 p-lr-15', required: true, placeholder: Spree.t(:bic) %>
+        </div>
       </p>
     <% end %>
   <% end %>
