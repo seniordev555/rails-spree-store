@@ -11,6 +11,10 @@ development:
   <<: *default
   database: tapes_development
 
+production:
+  <<: *default
+  database: tapes_production
+
 test:
   <<: *default
   database: tapes_test
