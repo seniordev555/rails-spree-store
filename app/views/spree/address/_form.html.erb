@@ -49,12 +49,34 @@
         <%= form.text_field :state_name, class: 'form-control', required: true %>
       </noscript>
   <% end %>
+
+
+
+
+
+
+
+
   <p class="form-group" id=<%="#{address_id}phone" %>>
-    <%= form.label :phone do %>
-      <%= Spree.t(:phone) %><% if address.require_phone? %><abbr class="required" title="Обязательно для заполнения">*</abbr><% end %>
-    <% end %>
-    <%= form.phone_field :phone, class: 'form-control', required: address.require_phone? %>
+    <div class="bor8 bg0 m-b-22">
+      <%= form.phone_field :phone, class: 'stext-111 cl8 plh3 size-111 p-lr-15', placeholder: Spree.t(:phone), required: address.require_phone? %>
+    </div>
   </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <% if @order.entity? %>
     <p class="form-group" id=<%="#{address_id}company" %>>
