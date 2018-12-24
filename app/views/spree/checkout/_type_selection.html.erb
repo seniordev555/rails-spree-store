@@ -2,12 +2,12 @@
   <div class="col-sm-12" data-hook="billing_fieldset_wrapper">
     <div class="panel panel-default" id="billing" data-hook>
         <div class="panel-heading">
-          <h3 class="panel-title"><%= Spree.t(:type_selection) %></h3>
+          <h4 class="mtext-109 cl2"><%= Spree.t(:type_selection) %></h4>
         </div>
         <div class="panel-body">
-          <div class="well text-center form-buttons" data-hook="buttons">
-            <%= form.submit 'Купить как физическое лицо', name: :individual, class: 'btn btn-lg btn-info' %>
-            <%= form.submit 'Купить как юридическое лицо', name: :entity, class: 'btn btn-lg btn-success' %>
+          <div  data-hook="buttons">
+            <%= form.submit 'Купить как физическое лицо', name: :individual, class: 'flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5' %>
+            <%= form.submit 'Купить как юридическое лицо', name: :entity, class: 'flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5' %>
           </div>
         </div>
     </div>
