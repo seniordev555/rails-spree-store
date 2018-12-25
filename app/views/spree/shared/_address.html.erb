@@ -1,25 +1,27 @@
 <div class="address vcard">
-  <div class="fn"><b>ФИО: </b><%= address.full_name %></div>
+  <div class="fn"><span class="stext-110 cl2">ФИО: </span>
+    <span class="stext-111 cl6 p-t-2"><%= address.full_name %></span>
+    </div>
   <div class="adr">
     <div class="street-address">
       <div class="street-address-line">
-        <b> Адрес: </b>
-        <%= address.address1 %>
+        <span class="stext-110 cl2"> Адрес: </span>
+        <span class="stext-111 cl6 p-t-2"><%= address.address1 %></span>
       </div>
     </div>
     <div class="local">
       <% if Spree::Config[:address_requires_state] %>
         <span class="region">
-          <b> Регион: </b>
-          <%= address.state.name %>
+          <span class="stext-110 cl2"> Регион: </span>
+          <span class="stext-111 cl6 p-t-2"><%= address.state.name %></span>
         </span>
       <% end %>
     </div>
   </div>
   <% unless address.phone.blank? %>
     <div class="tel">
-      <b> Телефон: </b>
-      <%= address.phone %>
+      <span class="stext-110 cl2"> Телефон: </span>
+      <span class="stext-111 cl6 p-t-2"><%= address.phone %></span>
     </div>
   <% end %>
 </div>

@@ -1,42 +1,43 @@
 <div class="address vcard">
   <% unless order.bill_address.company.blank? %>
     <div class="org">
-      <b>Название компании: </b><%= order.bill_address.company %>
+      <span class="stext-110 cl2">Название компании: </span><span class="stext-111 cl6 p-t-2"><%= order.bill_address.company %></span>
     </div>
   <% end %>
   <% unless order.payer_account_number.blank? %>
     <div class="org">
-      <b>УНП: </b><%= order.payer_account_number %>
+      <span class="stext-110 cl2">УНП: </span><span class="stext-111 cl6 p-t-2"><%= order.payer_account_number %></span>
     </div>
   <% end %>
   <% unless order.representative_position.blank? %>
     <div class="org">
-      <b>Позиция представителя: </b><%= order.representative_position %>
+      <span class="stext-110 cl2">Позиция представителя: </span><span class="stext-111 cl6 p-t-2"><%= order.representative_position %></span>
     </div>
   <% end %>
   <% unless order.grounds.blank? %>
     <div class="org">
-      <b>Основания представителя: </b><%= order.grounds %>
+      <span class="stext-110 cl2">Основания представителя: </span><span class="stext-111 cl6 p-t-2"><%= order.grounds %></span>
     </div>
   <% end %>
   <% unless order.bank_name.blank? %>
     <div class="org">
-      <b>Название банка: </b><%= order.bank_name %>
+      <span class="stext-110 cl2">Название банка: </span><span class="stext-111 cl6 p-t-2"><%= order.bank_name %></span>
     </div>
   <% end %>
   <% unless order.bank_address.blank? %>
     <div class="org">
-      <b>Адрес банка: </b><%= order.bank_address %>
+      <span class="stext-110 cl2">Адрес банка: </span><span class="stext-111 cl6 p-t-2"><%= order.bank_address %></span>
     </div>
   <% end %>
   <% unless order.checking_account.blank? %>
     <div class="org">
-      <b>Расчетный счет: </b><%= order.checking_account %>
+      <span class="stext-110 cl2">Расчетный счет: </span><span class="stext-111 cl6 p-t-2"><%= order.checking_account %></span>
     </div>
   <% end %>
   <% unless order.bic.blank? %>
     <div class="org">
-      <b>BIC/SWIFT: </b><%= order.bic %>
+      <span class="stext-110 cl2">BIC/SWIFT: </span><span class="stext-111 cl6 p-t-2"><%= order.bic %></span>
     </div>
   <% end %>
 </div>
+
