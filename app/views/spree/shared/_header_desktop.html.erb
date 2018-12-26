@@ -9,17 +9,18 @@
 
       <!-- Menu desktop -->
       <div class="menu-desktop">
-        <ul class="main-menu">
-          <li class="label1 active-menu" data-label1="hot">
-            <%= link_to 'Shop', spree.root_path %>
+        <b>
+          <ul class="main-menu">
+            <li class="label1 active-menu" data-label1="hot">
+                <%= link_to 'Магазин', spree.root_path %>
+            </li>
+
+          <li>
+            <%= link_to 'О нас', about_us_path %>
           </li>
 
           <li>
-            <%= link_to 'About', about_us_path %>
-          </li>
-
-          <li>
-            <%= link_to 'Contact', contact_us_path %>
+            <%= link_to 'Контакты', contact_us_path %>
           </li>
         </ul>
       </div>
