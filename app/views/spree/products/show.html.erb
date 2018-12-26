@@ -6,7 +6,7 @@
       <div data-hook="product_left_part_wrap">
         <div id="product-images" data-hook="product_images">
           <div class="wrap-pic-w pos-relative">
-                <%= product_image(@product, itemprop: "image") %>
+            <%= product_image(@product, itemprop: "image") %>
           </div>
           <div id="thumbnails" data-hook>
             <%= render partial: 'thumbnails' %>
@@ -26,9 +26,9 @@
     <div class="col-md-8 col-sm-7" data-hook="product_right_part">
       <div data-hook="product_right_part_wrap">
         <div id="product-description" data-hook="product_description">
-          <h4 class="mtext-105 cl2 js-name-detail p-b-14">
-          <%= @product.name %>
-        </h4>
+          <h4 class="mtext-105 cl2 p-b-14">
+            <%= @product.name %>
+          </h4>
 
           <div class="stext-102 cl3 p-t-23" itemprop="description" data-hook="description">
             <%= product_description(@product) %>
@@ -46,16 +46,3 @@
     </div>
   </div>
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
