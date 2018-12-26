@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   Spree::Core::Engine.routes.draw do
     get 'show_invoice', action: :show_invoice, controller: :orders
     get 'show_contract', action: :show_contract, controller: :orders
+    get 'contact_us', action: :contact_us, controller: :static_page
+    get 'about_us', action: :about_us, controller: :static_page
   end
 end
