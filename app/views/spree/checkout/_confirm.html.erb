@@ -11,6 +11,7 @@
   <% if @order.using_store_credit? %>
     <%= button_tag Spree.t('store_credit.remove'), name: 'remove_store_credit', class: 'continue btn' %>
   <% end %>
-  <%= submit_tag Spree.t(:place_order), class: 'flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10' %>
+  <%= submit_tag Spree.t(:place_order), class: 'flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer' %>
   <script>Spree.disableSaveOnClick();</script>
 </div>
+<br>
