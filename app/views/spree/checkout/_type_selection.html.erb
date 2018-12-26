@@ -5,7 +5,7 @@
           <h4 class="mtext-109 cl2"><%= Spree.t(:type_selection) %></h4>
         </div>
         <div class="panel-body">
-          <div  data-hook="buttons">
+          <div  data-hook="buttons" style="display: flex">
             <%= form.submit 'Купить как физическое лицо', name: :individual, class: 'flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5' %>
             <%= form.submit 'Купить как юридическое лицо', name: :entity, class: 'flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5' %>
           </div>

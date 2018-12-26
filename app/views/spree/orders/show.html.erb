@@ -9,11 +9,11 @@
 
     <br class="clear" />
 
-    <p data-hook="links">
-      <%= link_to Spree.t(:back_to_store), spree.root_path, class: "button" %>
+    <p data-hook="links" class="flex-w flex-m m-r-20 m-tb-5">
+      <%= link_to Spree.t(:back_to_store), spree.root_path, class: "flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10" %>
       <% unless order_just_completed?(@order) %>
         <% if try_spree_current_user && respond_to?(:account_path) %>
-          <%= link_to Spree.t(:my_account), account_path, class: "button" %>
+          <%= link_to Spree.t(:my_account), account_path, class: "flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10" %>
         <% end %>
       <% end %>
     </p>
