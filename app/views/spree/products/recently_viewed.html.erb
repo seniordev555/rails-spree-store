@@ -8,31 +8,31 @@
 
       <div class="panel-body">
         <ul id="recently_viewed_products" class="list-group">
-          <% cached_recently_viewed_products.each do |product| %>
-            <% url = spree.product_path(product) %>
-            <div id="product_<%= product.id %>" class="col-md-3 col-sm-6 col-xs-6 product-list-item" data-hook="products_list_item">
-
-              <div class="panel panel-default">
+          <div class="text-center stext-101">
+            <% cached_recently_viewed_products.each do |product| %>
+              <% url = spree.product_path(product) %>
+              <div id="product_<%= product.id %>" class="col-md-3 col-sm-6 col-xs-6 product-list-item" data-hook="products_list_item">
                 <% cache(cache_key_for_product(product)) do %>
-                  <div class="panel-body text-center product-body">
-                    <%= link_to url, itemprop: "url" do %>
-                      <%= small_image(product, itemprop: "image") %><br/>
-                      <%= content_tag(:span, truncate(product.name, length: 50), class: 'info', itemprop: "name", title: product.name) %>
-                    <% end %>
-                    <br/>
-                  </div>
-                  <div class="panel-footer text-center">
-                    <span class="price selling lead" itemprop="price" content="<%= (product.price_in(current_currency).amount.nil?)? 0 : product.price_in(current_currency).amount.to_d %>">
+                  <%= link_to url, itemprop: "url" do %>
+                    <div class="block2-pic hov-img0">
+                      <%= product_image(product, itemprop: "image") %><br/>
+                    </div>
+                    <%= content_tag(:span, truncate(product.name, length: 50), class: 'cl8', itemprop: "name", title: product.name) %>
+                  <% end %>
+                  <br/>
+                  <span itemprop="offers">
+                    <span class="stext-105 cl3" itemprop="price" content="<%= (product.price_in(current_currency).amount.nil?)? 0 : product.price_in(current_currency).amount.to_d %>">
                       <%= display_price(product) %>
                     </span>
                     <span itemprop="priceCurrency" content="<%= current_currency %>"></span>
-                  </div>
+                  </span>
                 <% end %>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </ul>
       </div>
+
     </div>
   </div>
 <% end %>

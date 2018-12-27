@@ -6,7 +6,7 @@
       <% if taxonomy.root.children.any? %>
         <h3 class='taxonomy-root text-center'><%= Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name) %></h3>
         <br>
-        <div class="text-center stext-101" style="color:#000;">
+        <div class="text-center stext-101">
           <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
         </div>
       <% end %>
