@@ -13,7 +13,9 @@
 
     <div class="container" style="min-height: 68%">
       <div class="row" data-hook>
-        <%= spree_breadcrumbs(@taxon) %>
+        <div class="txt-center">
+          <%= spree_breadcrumbs(@taxon) %>
+        </div>
 
         <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
 

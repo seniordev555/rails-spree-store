@@ -4,8 +4,11 @@
   <% @taxonomies.each do |taxonomy| %>
     <% cache [I18n.locale, taxonomy, max_level, @taxon] do %>
       <% if taxonomy.root.children.any? %>
-        <h4 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name) %></h4>
-        <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+        <h3 class='taxonomy-root text-center'><%= Spree.t(:shop_by_taxonomy, taxonomy: taxonomy.name) %></h3>
+        <br>
+        <div class="text-center stext-101" style="color:#000;">
+          <%= taxons_tree(taxonomy.root, @taxon, max_level) %>
+        </div>
       <% end %>
     <% end %>
   <% end %>

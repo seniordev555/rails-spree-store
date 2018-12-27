@@ -102,6 +102,21 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   bottom: 0;
   padding: 1rem;
 
+.checkbox-label { margin-left: 7px; }
+
+.checkbox-block {
+  word-break: break-word;
+  display: flex;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    background-color: #717fe0;
+}
+
+.breadcrumb > li + li:before {
+    content: "> ";
+    padding: 0 5px;
+    color: #ccc;
 }
 
 /*//////////////////////////////////////////////////////////////////
