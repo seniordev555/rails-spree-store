@@ -12,7 +12,7 @@
       </div>
     </td>
     <td class="column-2" data-hook="cart_item_description">
-      <h4><%= link_to line_item.name, product_path(variant.product) %></h4>
+      <h4><%= link_to line_item.name, product_path(variant.product), class: 'link-purple' %></h4>
       <%= variant.options_text %>
       <% if line_item.insufficient_stock? %>
         <span class="out-of-stock">
