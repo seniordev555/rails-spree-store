@@ -19,9 +19,6 @@
           <%= Spree.t(:out_of_stock) %>&nbsp;&nbsp;<br />
         </span>
       <% end %>
-      <span class="line-item-description" data-hook="line_item_description">
-        <%= line_item_description_text(line_item.description) %>
-      </span>
     </td>
     <td class="column-2" data-hook="cart_item_price">
       <%= line_item.single_money.to_html %>
