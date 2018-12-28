@@ -2,19 +2,19 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: tapes
+  username: spree_sample
   password: <%= ENV['DATABASE_PASSWORD'] %>
   timeout: 5000
   host: 'localhost'
 
 development:
   <<: *default
-  database: tapes_development
+  database: spree_sample_development
 
 production:
   <<: *default
-  database: tapes_production
+  database: spree_sample_production
 
 test:
   <<: *default
-  database: tapes_test
+  database: spree_sample_test
